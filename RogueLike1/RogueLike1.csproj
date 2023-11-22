@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA326A64-E813-4AC6-BF9E-3B72B248AD10}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RogueLike1</RootNamespace>
+    <AssemblyName>RogueLike1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="graphics\drawing.cs" />
+    <Compile Include="graphics\menuDrawing.cs" />
+    <Compile Include="IO\GAMEOVER.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="Map\Clock.cs" />
+    <Compile Include="Item\Cloth.cs" />
+    <Compile Include="Item\IronArmor.cs" />
+    <Compile Include="Item\Faust.cs" />
+    <Compile Include="Item\Gun.cs" />
+    <Compile Include="Object\ItemObject.cs" />
+    <Compile Include="Object\Demon.cs" />
+    <Compile Include="Object\Goblin.cs" />
+    <Compile Include="IO\AttackIO.cs" />
+    <Compile Include="Item\Armor.cs" />
+    <Compile Include="Object\Enemy.cs" />
+    <Compile Include="Item\FoodItem.cs" />
+    <Compile Include="IO\EventIO.cs" />
+    <Compile Include="IO\BasicIO.cs" />
+    <Compile Include="Item\Item.cs" />
+    <Compile Include="IO\LoadIO.cs" />
+    <Compile Include="Object\NPC.cs" />
+    <Compile Include="Object\Character.cs" />
+    <Compile Include="IO\MovieIO.cs" />
+    <Compile Include="IO\NormalIO.cs" />
+    <Compile Include="Object\Player.cs" />
+    <Compile Include="IO\MenuIO.cs" />
+    <Compile Include="Object\Cursor.cs" />
+    <Compile Include="Object\Object.cs" />
+    <Compile Include="Map\TextBox.cs" />
+    <Compile Include="Map\Title.cs" />
+    <Compile Include="Map\Map.cs" />
+    <Compile Include="IO\SearchIO.cs" />
+    <Compile Include="IO\SaveIO.cs" />
+    <Compile Include="Selection.cs" />
+    <Compile Include="Map\Menu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IO\TitleIO.cs" />
+    <Compile Include="Item\Weapon.cs" />
+    <Compile Include="Map\StatusWindow.cs" />
+    <Compile Include="Object\Slime.cs" />
+    <Compile Include="IO\ToolIO.cs" />
+    <Compile Include="Item\SmokedMeat.cs" />
+    <Compile Include="Item\Stick.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="characters\" />
+    <Folder Include="scenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="maps\Prologue.txt" />
+    <Content Include="maps\Title.txt" />
+    <Content Include="maps\Stage1.txt" />
+    <Content Include="StageInfo\Stage1.txt" />
+    <Content Include="StageInfo\Stage2.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
